@@ -1,4 +1,4 @@
-
+9
 <html>
 
 <body>
@@ -17,8 +17,24 @@
   <body>
   
   
-  
-  
+  <script>
+  function enviarTramite(evt) {
+    valor = document.getElementById("codigo").value;
+    if (valor === "000") {
+        location.href = "login.jsp";
+        evt.preventDefault(); // Evitamos el submit en nuevos navegadores
+        return false; // Evitamos el submit viejos navegadores
+    } else {
+        return true;
+    }
+}
+</script>
+<form id="codSeguimiento" onsubmit="enviarTramite(event);" action="consultaServlet" method="POST">
+    <p>Seguimiento de tramites</p>
+    <input id="codigo" name="codigo" type=text maxlength="10">
+    <br>
+    <input id="boton" name="enviar" type="submit" value="Consultar">
+</form>
   
     <input type="checkbox" id="active">
     <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
