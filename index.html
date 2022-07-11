@@ -1,66 +1,695 @@
-<html>
-<body>
-<form action"https://smtpjs.com/v3/smtp.js" mathod="post">
-<input type=hidden name="recipient" value="pepe@pepe.com">
-<input type="text" name="subject" value="Asunto del mail que se envia">
-<input type=hidden name="redirect" value="http://www.dominioxyz.com/gracias.html">
+<!doctype >
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<table border="0" cellspacing="2" cellpadding="2">
-    <tr>
-       <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Nombre:<br>
-          <input type="text" name="nombre" size="25" maxlength="300">
-          </font></td>
-       <td> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">Email:<br>
-          <input type="text" name="email" size="25" maxlength="300">
-          </font></td>
-    </tr>
-    <tr>
-       <td><font size="2">Dirección:<br>
-          <input type="text" name="direccion" size="30" maxlength="500">
-          </font></td>
-       <td><font size="2">Telefono:<br>
-          <input type="text" name="telefono" size="12" maxlength="15">
-          </font></td>
-    </tr>
-    <tr>
-       <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Observaciones:<br>
-          <textarea name="observaciones" cols="50" rows="5"></textarea>
-          </font></td>
-    </tr>
-    <tr>
-       <td colspan="2">
-          <div align="center"><br>
-          <input type="submit" value="Enviar">
-       </td>
-    </tr>
-</table>
-</form>
-<a href="p3467456@gmail.com">email me here!</a>
-Share
-a <br>
-<script>
-function sendMail(){
-Email.send({
-    SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
-    To : '"p3467456@gmail.com",
-    From : "p3467456@gmil.com",
-    Subject : "This is the subject",
-    Body : "document.getElementById('text').value",
-	Attachments : [
-	{
-		name : "smtpjs.png",
-		path : "https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png"
-	}]
-}).then(
-  message => alert(message)
-);}
-</script>
-<textarea id="text">write text here...</textarea>
-<input type="button" value="sendEmail" onclick="sendEmail()">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Little Fashion</title>
 
-<script>
-var Email = { send: function (a) { return new Promise(function (n, e) { a.nocache = Math.floor(1e6 * Math.random() + 1), a.Action = "Send"; var t = JSON.stringify(a); Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function (e) { n(e) }) }) }, ajaxPost: function (e, n, t) { var a = Email.createCORSRequest("POST", e); a.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), a.onload = function () { var e = a.responseText; null != t && t(e) }, a.send(n) }, ajax: function (e, n) { var t = Email.createCORSRequest("GET", e); t.onload = function () { var e = t.responseText; null != n && n(e) }, t.send() }, createCORSRequest: function (e, n) { var t = new XMLHttpRequest; return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t } };
-</script>
-</body>
+        <!-- CSS FILES -->
+        <link href="csss/tooplate-little-fashion.css" rel="stylesheet">
+<style>
+
+
+
+
+body {
+margin: 0;
+-webkit-tap-highlight-color:transparent;
+}
+.lightbox {
+text-decoration: none;
+list-style: none;
+visibility: hidden;
+display: table;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 97;
+background: white;
+}
+.lightbox:target {
+visibility: visible;
+}
+.lightbox-content {
+display: table-cell;
+color: white;
+vertical-align: middle;
+text-align: center;
+font-weight: 406;
+}
+.close-o {
+top: 3%;
+right: 3%;
+font-size: 110%;
+font-weight: 406;
+position: fixed;
+text-decoration: none;
+color: #000000;
+}
+.close {
+position: absolute;
+top: 3%;
+right: 3%;
+font-size: 100%;
+font-weight: 406;
+text-decoration: none;
+background: ;
+color: white;
+}
+.lightbox a {
+color: #717275;
+text-decoration: none;
+}
+.lightbox a:hover {
+color: #FF4400;
+}
+a {
+color: #717275;
+text-decoration: none;
+}
+a:hover {
+color: #FF4400;
+}
+.mb-3 a{
+color: #FF4400;
+}
+p {
+color: #717275;
+font-size: 100%;
+font-weight: 300;
+}
+.container-nav {
+background: white;
+position: absolute;
+top: 0%;
+right: 10px;
+padding-top: 3%;
+padding-bottom: 3%;
+font-weight: 406;
+text-decoration: none;
+border-radius: 5%;
+left: 2%;
+position: fixed;
+width: 100%;
+font-size: 190%;
+font-weight: 406;
+}
+.container-nav .navbar-h {
+color: #000000;
+font-weight: 06;
+}
+.container-nav .navbar-h span {
+color: #FF4400;
+}
+.site-header {
+margin-top: 21%;
+padding-top: 27%;
+padding-bottom: 100%;
+background: #f0f8ff;
+width: 100%;
+heigth: 100%;
+margin: ;
+text-align: center;
+}
+.product-detail {
+margin-top: 2%;
+margin-bottom: %;
+padding-top: 11%;
+padding-bottom: 100%;
+background: #f0f8ff;
+width: 100%;
+}
+.product-detail .col-lg-c .product-title {/*
+top: 0;
+margin-top: %;
+padding-top: %;
+padding-bottom: %;
+margin-bottom: %;*/
+width: 100%;
+heigth: %;
+margin: ;
+text-align: center;
+font-weight: 506;
+color: #000000;
+font-size: 100%;
+}
+.product-detail col-lg-c .clase-s-m {
+margin: 22%;
+left: 100%;
+}
+pre.prettyprint {
+background-color: #eee;
+width: 90%;
+border-radius: .7%;
+font-size: 13px;
+position: inline;
+padding: ;
+margin-left: 5%;
+overflow: auto;
+}
+
+
+
+
+
+.col-lg {
+margin: 2%;
+}
+.site-header .dap {
+color: #FF4400;
+}
+
+h4 {
+color: white;
+}
+h5 {
+color: white;
+}
+.site .container{
+background: #111111;
+width: 100%;
+padding-top: 9%;
+margin-bottom: -7%;
+padding-bottom: 5%;
+text-align: center;
+}
+.site li {
+list-style: none;
+text-align: center;
+margin-left: -11%;
+}
+
+</style>
+
+<!--
+
+Tooplate 2127 Little Fashion
+
+https://www.tooplate.com/view/2127-little-fashion
+
+-->
+    </head>
+    
+    <body>
+    
+			<div class="container-nav">
+                <a class="navbar-h navbar-brand" href="index.">
+                    <strong><span>Little</span> Fashion</strong>
+                </a>
+            </div>
+            
+			<nav class="navbar navbar-expand-lg">
+		        
+		        <a class="close-o" href="#example">menu </a>
+		        
+		        <div class="lightbox" id="example">
+		            <a href="#!" class="close">CLOSE</a>
+		            
+		            <div class="lightbox-content">
+		            
+			            <li>
+			                <a class="nav-link" href="index.">Home</a>
+			            </li>
+			         
+			            <li>
+			                <a class="nav-link" href="about.">Story</a>
+			            </li>
+			         
+			            <li>
+			                <a class="nav-link" href="products.">Products</a>
+			            </li>
+			         
+			            <li>
+			                <a class="nav-link" href="faq.">FAQs</a>
+			            </li>
+			         
+			            <li>
+			                <a class="nav-link" href="contact.">Contact</a>
+			            </li>
+		            </div>
+		        </div>
+		    </nav>
+		    
+   
+        <main>
+            <header class="site-header section-padding d-flex justify-content-center align-items-center">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg col-12">
+                            <h1>
+                                <span class="d-block dap text-primary" style="color: #FF4400;">We provide you</span>
+                                <span class="d-block dpc text-dark">Fashionable Stuffs</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="product-detail section-padding">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12">
+                            <div class="product-thumb">
+                            
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="product-info d-flex">
+                                <div>
+                                    <h1 class="product-title mb-0"><span></span></h1>
+                                    
+                                    
+
+
+<p class="product-p"></p>
+<pre class="prettyprint"><br>
+&lt;style>
+
+&lt;/style><br>
+&lt;div class="first">
+&lt;/div>
+</pre>
+<pre class="prettyprint">
+<style>/*
+.first {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  background: gray;
+}
+*/
+</style>
+<div class="first">
+</div>
+
+</pre>
+<p class="product-p"></p>
+<pre class="prettyprint"><br>
+&lt;style>
+.first {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  background: gray;
+}
+
+&lt;/style>
+&lt;div class="first">
+&lt;/div>
+</pre>
+<pre class="prettyprint">
+<style>
+.first-0001 {/*
+  position: relative;
+  width: 100%;
+  height: 50%;*/
+  background: gray;
+}
+
+</style>
+<div class="first-0001">
+</div>
+
+</pre>
+<p class="product-p"></p>
+<pre class="prettyprint"><br>
+&lt;style>
+.first {
+  background: gray;
+}
+
+&lt;/style>
+&lt;div class="first">
+&lt;/div>
+</pre>
+<pre class="prettyprint">
+<style>
+.first-0002 {
+  width: 50%;
+  background: gray;
+}
+
+</style>
+<div class="first-0002">
+</div>
+</pre>
+<p class="product-p"></p>
+<pre class="prettyprint"><br>
+&lt;style>
+.first {
+  margin-left: 5%;
+  width: 50%;
+  background: gray;
+}
+
+&lt;/style>
+&lt;div class="first">
+&lt;/div>
+</pre>
+<pre class="prettyprint">
+<style>
+.first-0003 {
+  margin-left: 5%;
+  width: 50%;
+  background: gray;
+}
+
+</style>
+<div class="first-0003">
+</div>
+
+</pre>
+<p class="product-p"></p>
+<pre class="prettyprint"><br>
+&lt;style>
+.first {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  background: gray;
+}
+
+.interno {
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  transform: translateX(-50%);
+  background: red;
+}
+&lt;/style>
+&lt;div class="first">
+  &lt;div class="interno">
+    
+  &lt;/div>
+&lt;/div>
+</pre>
+<pre class="prettyprint">
+<style>
+.first-0005 {
+  margin-top: 2%;
+  margin-left: 5%;
+  width: 50%;
+  background: gray;
+}
+
+</style>
+<div class="first-0005">
+</div>
+
+</pre>
+<p class="product-p"></p>
+<pre class="prettyprint"><br>
+&lt;style>
+.first {
+  width: 50%;
+  margin-left: 5%;
+  background: gray;
+}
+
+.second {
+  background: red;
+}
+&lt;/style>
+&lt;div class="first">
+  &lt;div class="second">
+    
+  &lt;/div>
+&lt;/div>
+</pre>
+<pre class="prettyprint">
+<style>
+.first-0006 {/*
+  position: relative;*/
+  width: 50%;
+  margin-left: 5%;/*
+  height: 50%;*/
+  background: gray;
+}
+
+.sec-0001 {/*
+  position: absolute;*
+  margin-top: 10%;
+  left: 50%;/*
+  width: 50%;*
+  height: 50%;/*
+  transform: translateX(-50%);*/
+  background: red;
+}
+</style>
+<div class="first-0006">
+  <div class="sec-0001">
+    
+  </div>
+</div>
+
+</pre>
+<p class="product-p"></p>
+<pre class="prettyprint"><br>
+&lt;style>
+.first {
+  width: 50%;
+  margin-left: 5%;
+  background: gray;
+}
+
+.second {
+  width: 50%;
+  background: red;
+}
+&lt;/style>
+&lt;div class="first">
+  &lt;div class="interno">
+    
+  &lt;/div>
+&lt;/div>
+</pre>
+<pre class="prettyprint">
+<style>
+.first {/*
+  position: relative;*/
+  width: 50%;
+  margin-left: 5%;/*
+  height: 50%;*/
+  background: gray;
+  }
+  
+.sec-0001 {/*
+  position: absolute;*
+  margin-top: 10%;
+  left: 50%;*/
+  width: 50%;/*
+  height: 50%;/*
+  transform: translateX(-50%);*/
+  background: red;
+}
+</style>
+<div class="first-0006">
+  <div class="sec-0001">
+    
+  </div>
+</div>
+
+</pre><!--
+<p class="product-p"></p>
+<pre class="prettyprint"><br>
+&lt;style>
+.first {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  background: gray;
+}
+
+.interno {
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  transform: translateX(-50%);
+  background: red;
+}
+&lt;/style>
+&lt;div class="first">
+  &lt;div class="interno">
+    
+  &lt;/div>
+&lt;/div>
+</pre>
+<pre class="prettyprint">
+<style>
+.first {/*
+  position: relative;*/
+  width: 100%;
+  height: 50%;
+  background: gray;
+}
+
+.interno {/*
+  position: absolute;*/
+  margin-top: 10%;
+  left: 50%;/*
+  width: 50%;*/
+  height: 50%;/*
+  transform: translateX(-50%);*/
+  background: red;
+}
+</style>
+<div class="first">
+    
+</div>
+<div class="interno">
+    
+  </div>
+
+</pre>
+<p class="product-p"></p>
+<pre class="prettyprint"><br>
+&lt;style>
+.first {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  background: gray;
+}
+
+.interno {
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  transform: translateX(-50%);
+  background: red;
+}
+&lt;/style>
+&lt;div class="first">
+  &lt;div class="interno">
+    
+  &lt;/div>
+&lt;/div>
+</pre>
+<pre class="prettyprint">
+<style>
+.first {/*
+  position: relative;*/
+  width: 100%;
+  height: 50%;
+  background: gray;
+}
+
+.interno {/*
+  position: absolute;*/
+  margin-top: 10%;
+  left: 50%;/*
+  width: 50%;*/
+  height: 50%;/*
+  transform: translateX(-50%);*/
+  background: red;
+}
+</style>
+<div class="first">
+  <div class="interno">
+    
+  </div>
+</div>
+
+</pre>-->
+
+          </div>
+
+                                </div>
+
+                                <small class="product-price text-muted ms-auto mt-auto mb-5"></small>
+                            </div>
+
+                            <div class="product-description">
+                                     
+
+                                <p class="lead mb-5"></p>
+                            </div>
+
+                            <div class="product-cart-thumb row">
+                                <div class="col-lg-6 col-12">
+                                    
+                                    
+                                </div>
+
+                                <div class="col-lg-6 col-12 mt-4 mt-lg-0">
+                                
+                                </div>
+
+                                <p>
+                                    <a href="#" class="product-additional-link"></a>
+
+                                    <a href="#" class="product-additional-link"></a>
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+        <footer class="site">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-10 me-auto mb-4">
+                        <h4 class="text-white mb-3"><a href="index.">Little</a> Fashion</h4>
+                        <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2022 <strong>Little Fashion</strong></p>
+                        <br>
+                        <p class="copyright-text">Designed by <a href="https://www.tooplate.com/" target="_blank">Tooplate</a></p>
+                    </div>
+
+                    <div class="col-lg-5 col-8">
+                        <h5 class="text-white mb-3">Sitemap</h5>
+
+                        <ul class="footer-menu d-flex flex-wrap">
+                            <li class="footer-menu-item"><a href="about." class="footer-menu-link">Story</a></li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Products</a></li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Privacy policy</a></li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">FAQs</a></li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-4">
+                        <h5 class="text-white mb-3">Social</h5>
+
+                        <ul class="social-icon">
+
+                            <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+
+                            <li><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+
+                            <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+
+                            <li><a href="#" class="social-icon-link bi-skype"></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+   
+   
+    </body>
+
 </html>
-
