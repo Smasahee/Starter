@@ -1,105 +1,40 @@
 <html>
-
-<head>
-    
-    <title>myweb</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
-    <link href="tooplate-little-fashion.css">
-<script>
-function validarFormulario(e){
-  var error = false;
-  var messages = '';
-  var nombre = document.getElementsByName('nombre')[0].value;
-  if (!nombre){
-    messages+= 'Debe rellenar el campo nombre\n';
-    error = true;
-  }
-  var telefono = document.getElementsByName('telefono')[0].value;
-  if (!telefono){
-    messages+= 'Debe rellenar el campo teléfono\n';
-    error = true;
-  }
-  var email = document.getElementsByName('email')[0].value;
-  if (!email) {
-    messages+= 'Debe rellenar el campo email\n';
-    error = true;
-  }
-  var comentarios = document.getElementsByName('mensaje')[0].value;
-  if (!comentarios) {
-    messages+= 'Debe rellenar el campo comentarios\n';
-    error = true;
-  }
-  var errorDiv = document.querySelector('.errorMessages');
-  errorDiv.innerText = messages;
-  if (error) {
-    e.preventDefault();
-  }
-  return !error;
-}
-
-var btnEnviar = document.querySelector('.bottom');
-btnEnviar.addEventListener('click', validarFormulario);
-.errorMessages{
-  color: red;
-}
-</script>
-<script>
-document.write("<form class='form' onsubmit='enviar(event)'><div class='content-input'><div class='input'><input name='nombre' type='text' id='nombre' title='Ingrese su nombre' placeholder='Su nombre'></div></div><div class='content-input'><div class='input'><input name='telefono' type='text' id='telefono' placeholder='Su telefono de contacto'></div></div><div class='content-input'><div class='input'><input name='email' type='text' id='email' title='Ingrese su email' placeholder='Su email' require></div></div><div class='content-input'><div class='input'><textarea name='mensaje' rows='5' id='mensaje' title='Comentarios' placeholder='Comentarios'></textarea></div></div><div class='content-input'><div class='input'><a href='' onclick='myfunction()'><input type='submit' class='bottom' value= 'Enviar'/></a></div></div></form><div class='errorMessages'></div></div>");
-
-</script>
-
-<script>
-
-function myfunction(){
- document.write("<div class='nm'><div class='nmf'><nav class='navbar navbar-expand-lg'> <div class='container'> <a class='navbar-brand' href='index.html'> <strong><span>Little</span> Fashion</strong> </a></div> <a class='close-o' href='#example'> menu </a></div> <div class='lightbox' id='example'> <a href='#!' class='close'>CLOSE</a> <div class='lightbox-content'> <li class='nav-item'> <a class='nav-link' href='index.html'>Home</a> </li> <li class='nav-item'> <a class='nav-link' href='about.html'>Story</a> </li> <li class='nav-item'> <a class='nav-link' href='products.html'>Products</a> </li> <li class='nav-item'> <a class='nav-link' href='faq.html'>FAQs</a> </li> <li class='nav-item'> <a class='nav-link' href='contact.html'>Contact</a> </li> </div> </div> </div></div> <main> <header class='site-header section-padding d-flex justify-content-center align-items-center'> <div class='container'> <div class='row'> <div class='col-lg-10 col-12'> <h1> <span class='d-block text-primary'>We provide you</span> <span class='d-block text-dark'>Fashionable Stuffs</span> </h1> </div> </div> </div> </header> <section class='product-detail section-padding'> <div class='container'> <div class='row'> <div class='col-lg-6 col-12'> <div class='product-thumb'> <img ssrc='images/product/evan-mcdougall-qnh1odlqOmk-unsplash.jpeg' class='img-fluid product-image' alt=''> </div> </div> <div class='col-lg-6 col-12'> <div class='product-info d-flex'> <div> <h2 class='product-title mb-0'></h2> <p class='product-p'></p> </div> <small class='product-price text-muted ms-auto mt-auto mb-5'></small> </div> <div class='product-description'> <strong class='d-block mt-4 mb-2'> </strong> <p class='lead mb-5'></p> </div> <div class='product-cart-thumb row'> <div class='col-lg-6 col-12'> </div> <div class='col-lg-6 col-12 mt-4 mt-lg-0'> </div> <p> <a href='#' class='product-additional-link'></a> <a href='#' class='product-additional-link'></a> </p> </div> </div> </div> </div> </section> <section class='related-product section-padding border-top'> <div class='container'> <div class='row'> <div class='col-12'> <h3 class='mb-5'>You might also like</h3> </div> <div class='col-lg-4 col-12 mb-3'> <div class='product-thumb'> <a href='product-detail.html'> </a> <div class='product-top d-flex'> <span class='product-alert me-auto'></span> <a href='#' class='bi-heart-fill product-icon'></a> </div> <div class='product-info d-flex'> <div> <h5 class='product-title mb-0'> <a href='product-detail.html' class='product-title-link'></a> </h5> <p class='product-p'>Original package design from house</p> </div> <small class='product-price text-muted ms-auto mt-auto mb-5'></small> </div> </div> </div> <div class='col-lg-4 col-12 mb-3'> <div class='product-thumb'> <a href='product-detail.html'> </a> <div class='product-top d-flex'> <span class='product-alert'></span> <a href='#' class='bi-heart-fill product-icon ms-auto'></a> </div> <div class='product-info d-flex'> <div> <h5 class='product-title mb-0'> <a href='product-detail.html' class='product-title-link'></a> </h5> <p class='product-p'></p> </div> <small class='product-price text-muted ms-auto mt-auto mb-5'></small> </div> </div> </div> <div class='col-lg-4 col-12'> <div class='product-thumb'> <a href='product-detail.html'> </a> <div class='product-top d-flex'> <a href='#' class='bi-heart-fill product-icon ms-auto'></a> </div> <div class='product-info d-flex'> <div> <h5 class='product-title mb-0'> <a href='product-detail.html' class='product-title-link'></a> </h5> <p class='product-p'></p> </div> <small class='product-price text-muted ms-auto mt-auto mb-5'></small> </div> </div> </div> </div> </div> </section> </main> <footer class='site-footer'> <div class='container'> <div class='row'> <div class='col-lg-3 col-10 me-auto mb-4'> <h4 class='text-white mb-3'><a href='index.html'>Little</a> Fashion</h4> <p class='copyright-text text-muted mt-lg-5 mb-4 mb-lg-0'>Copyright © 2022 <strong>Little Fashion</strong></p> <br> <p class='copyright-text'>Designed by <a href='https://www.tooplate.com/' target='_blank'>Tooplate</a></p> </div> <div class='col-lg-5 col-8'> <h5 class='text-white mb-3'>Sitemap</h5> <ul class='footer-menu d-flex flex-wrap'> <li class='footer-menu-item'><a href='about.html' class='footer-menu-link'>Story</a></li> <li class='footer-menu-item'><a href='#' class='footer-menu-link'>Products</a></li> <li class='footer-menu-item'><a href='#' class='footer-menu-link'>Privacy policy</a></li> <li class='footer-menu-item'><a href='#' class='footer-menu-link'>FAQs</a></li> <li class='footer-menu-item'><a href='#' class='footer-menu-link'>Contact</a></li> </ul> </div> <div class='col-lg-3 col-4'> <h5 class='text-white mb-3'>Social</h5> <ul class='social-icon'> <li><a href='#' class='social-icon-link bi-youtube'></a></li> <li><a href='#' class='social-icon-link bi-whatsapp'></a></li> <li><a href='#' class='social-icon-link bi-instagram'></a></li> <li><a href='#' class='social-icon-link bi-skype'></a></li> </ul> </div> </div> </div> </footer> ");
- 
- }
-</script>
-
-</head>
-
 <body>
+<FORM ACTION="http://starter.vercel.app" METHOD="POST">
+<input type=hidden name="recipient" value="pepe@pepe.com">
+<input type=hidden name="subject" value="Asunto del mail que se envia">
+<input type=hidden name="redirect" value="http://www.dominioxyz.com/gracias.html">
 
-<style>
-body {
-  margin: 1%;
-  background-color: #9f9da7;
-}
-form {
-  margin: 1%;
-}
-form input {
-  margin-bottom: 1%;
-  font-family: inherit;
-  width: 100%;
-  outline: none;
-  background-color: #fff;
-  border-radius: 4px;
-  border: none;
-  display: block;
-  padding: 0.9rem 0.7rem;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-  font-size: 17px;
-  color: #4A4A4A;
-  text-indent: 40px;
-}
-form textarea {
-  margin-bottom: 1%;
-  font-family: inherit;
-  width: 100%;
-  outline: none;
-  background-color: #fff;
-  border-radius: 4px;
-  border: none;
-  display: block;
-  padding: 0.9rem 0.7rem;
-  font-size: 17px;
-  color: #4A4A4A;
-  text-indent: 40px;
-}
-</style>
-
+<table border="0" cellspacing="2" cellpadding="2">
+    <tr>
+       <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Nombre:<br>
+          <input type="text" name="nombre" size="25" maxlength="300">
+          </font></td>
+       <td> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">Email:<br>
+          <input type="text" name="email" size="25" maxlength="300">
+          </font></td>
+    </tr>
+    <tr>
+       <td><font size="2">Dirección:<br>
+          <input type="text" name="direccion" size="30" maxlength="500">
+          </font></td>
+       <td><font size="2">Telefono:<br>
+          <input type="text" name="telefono" size="12" maxlength="15">
+          </font></td>
+    </tr>
+    <tr>
+       <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Observaciones:<br>
+          <textarea name="observaciones" cols="50" rows="5"></textarea>
+          </font></td>
+    </tr>
+    <tr>
+       <td colspan="2">
+          <div align="center"><br>
+          <input type="submit" value="Enviar">
+       </td>
+    </tr>
+</table>
+</form>
 </body>
-
 </html>
 
